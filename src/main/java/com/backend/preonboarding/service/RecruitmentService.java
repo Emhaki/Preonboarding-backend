@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Map;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -26,8 +27,20 @@ public class RecruitmentService {
         recruitmentRepository.save(recruitment);
     }
 
-/*    public void RecruitmentUpdate(@RequestParam Map<String,Object> paramMap) {
-        (String) paramMap.get("")
-        recruitmentRepository.findById();
+    public void RecruitmentUpdate(@RequestParam Map<String,Object> paramMap) {
+        String companyId = (String) paramMap.get("CompanyId");
+        Recruitment recruitment = recruitmentRepository.findById(Long.parseLong(companyId)).orElseThrow();
+
+        String amount = (String)paramMap.get("Amount");
+        recruitment.setRecruitmentPosition((String)paramMap.get("Position"));
+        recruitment.setRecruitmentAmount(Long.parseLong(amount));
+        recruitment.setRecruitmentContent((String)paramMap.get("Content"));
+        recruitment.setLanguage((String)paramMap.get("Language"));
+        recruitmentRepository.save(recruitment);
+    }
+/*
+    public void RecruitmentDelete(@RequestParam(name = "CompanyId") Long companyId) {
+
     }*/
+
 }

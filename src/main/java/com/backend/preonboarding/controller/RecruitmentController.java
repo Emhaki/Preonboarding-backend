@@ -24,8 +24,8 @@ public class RecruitmentController {
     }
 
     @PostMapping("/job/update")
-    public ResponseEntity<String> updateJoboffer(@RequestParam Map<String, Object> paramMap) throws Exception {
-        /*recruitmentService.RecruitmentUpdate(paramMap);*/
+    public ResponseEntity<String> updateJobOffer(@RequestParam Map<String, Object> paramMap) throws Exception {
+        recruitmentService.RecruitmentUpdate(paramMap);
         return ResponseEntity.ok("success");
     }
 }
