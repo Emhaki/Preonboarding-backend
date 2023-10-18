@@ -28,4 +28,10 @@ public class RecruitmentController {
         recruitmentService.RecruitmentUpdate(paramMap);
         return ResponseEntity.ok("success");
     }
+
+    @PostMapping("/job/delete")
+    public ResponseEntity<String> deleteJobOffer(@RequestParam(name = "CompanyId") Long companyId) throws Exception {
+        recruitmentService.RecruitmentDelete(companyId);
+        return ResponseEntity.ok("success");
+    }
 }

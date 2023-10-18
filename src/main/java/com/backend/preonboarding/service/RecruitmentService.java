@@ -38,9 +38,9 @@ public class RecruitmentService {
         recruitment.setLanguage((String)paramMap.get("Language"));
         recruitmentRepository.save(recruitment);
     }
-/*
     public void RecruitmentDelete(@RequestParam(name = "CompanyId") Long companyId) {
-
-    }*/
+        Recruitment recruitment = recruitmentRepository.findById(companyId).orElseThrow();
+        recruitmentRepository.delete(recruitment);
+    }
 
 }
