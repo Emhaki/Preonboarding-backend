@@ -43,4 +43,8 @@ public class RecruitmentService {
         recruitmentRepository.delete(recruitment);
     }
 
+ /*   public RecruitList getListOfRecruit() {
+
+    }*/
+
 }

@@ -4,9 +4,11 @@ import com.backend.preonboarding.service.RecruitmentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -34,4 +36,9 @@ public class RecruitmentController {
         recruitmentService.RecruitmentDelete(companyId);
         return ResponseEntity.ok("success");
     }
+    // 사용자 채용공고
+ /*   @GetMapping("/recruit")
+    public ResponseEntity<List<String>> getRecruitList() {
+        *//*recruitmentService.*//*
+    }*/
 }
