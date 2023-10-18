@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class RecruitmentDTO {
 
-    private Long recruitId;
+    private Long companyId;
     private String recruitmentPosition;
     private Long recruitmentAmount;
     private String recruitmentContent;
