@@ -3,9 +3,9 @@ server:
 spring:
   datasource:
     driverClassName: org.h2.Driver
-    url: jdbc:h2:mem:testdb
+    url: jdbc:h2:~/onedayboot
     username: sa
-    password:
+    password: 1234
   jpa:
     hibernate:
       ddl-auto: create

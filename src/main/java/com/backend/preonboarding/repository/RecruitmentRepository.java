@@ -1,10 +1,10 @@
 package com.backend.preonboarding.repository;
 
-import com.backend.preonboarding.dto.RecruitmentDTO;
+import com.backend.preonboarding.domain.Recruitment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface RecruitmentRepository extends JpaRepository<RecruitmentDTO, Long> {
+public interface RecruitmentRepository extends JpaRepository<Recruitment, Long> {
 
 }
