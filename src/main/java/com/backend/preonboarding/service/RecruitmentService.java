@@ -25,4 +25,9 @@ public class RecruitmentService {
 
         recruitmentRepository.save(recruitment);
     }
+
+/*    public void RecruitmentUpdate(@RequestParam Map<String,Object> paramMap) {
+        (String) paramMap.get("")
+        recruitmentRepository.findById();
+    }*/
 }

@@ -17,10 +17,15 @@ public class RecruitmentController {
     private final RecruitmentService recruitmentService;
 
     @PostMapping("/job")
-    public ResponseEntity<String> postJobOffer(@RequestParam Map<String, Object> paramMap) throws Exception{
+    public ResponseEntity<String> postJobOffer(@RequestParam Map<String, Object> paramMap) throws Exception {
         recruitmentService.RecruitmentPost(paramMap);
         return ResponseEntity.ok("success");
 
     }
 
+    @PostMapping("/job/update")
+    public ResponseEntity<String> updateJoboffer(@RequestParam Map<String, Object> paramMap) throws Exception {
+        /*recruitmentService.RecruitmentUpdate(paramMap);*/
+        return ResponseEntity.ok("success");
+    }
 }

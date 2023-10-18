@@ -14,7 +14,7 @@ public class Recruitment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long companyId;
+    private Long recruitId;
 
     @Column(name = "position")
     private String recruitmentPosition;
